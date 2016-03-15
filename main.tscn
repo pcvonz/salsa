@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+transform/pos = Vector2( 300, 150 )
+
+[node name="RigidBody2D" parent="." instance=ExtResource( 1 )]
+
+
