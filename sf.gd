@@ -8,6 +8,7 @@ var shoot_vector = Vector2(0, -200)
 var direction = PI
 var ammo = 200
 var bullet
+var damage = false
 func _fixed_process(delta):
 	set_rot(direction)
 

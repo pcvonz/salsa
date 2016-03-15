@@ -7,15 +7,12 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="player1" type="RigidBody2D"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.98437, 0, 0, 1.98437, 7.23486, 10.9561 )
+shapes/0/transform = Matrix32( 1.98437, -0, 0, 1.98437, 7.23486, 10.9561 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 1 )
-shapes/1/transform = Matrix32( 1.98437, 0, 0, 1.98437, 7.23486, 7.95608 )
-shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
 mode = 0
@@ -34,7 +31,6 @@ velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
 script/script = ExtResource( 1 )
-__meta__ = { "_editor_collapsed":true }
 
 [node name="Panel" type="Panel" parent="."]
 
@@ -54,25 +50,6 @@ transform/scale = Vector2( 1.98437, 1.98437 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
-
-[node name="CollisionShape2D1" type="CollisionShape2D" parent="."]
-
-transform/pos = Vector2( 7.23486, 7.95608 )
-transform/scale = Vector2( 1.98437, 1.98437 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 1
-
-[node name="Panel 2" type="Panel" parent="."]
-
-margin/left = 4.0
-margin/top = -2.0
-margin/right = 44.0
-margin/bottom = 4.0
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
 
 [node name="Panel3" type="Panel" parent="."]
 
