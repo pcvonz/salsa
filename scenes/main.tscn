@@ -90,7 +90,6 @@ transform/pos = Vector2( 1.85077, -147.75 )
 
 transform/pos = Vector2( 536.915, 365.572 )
 transform/scale = Vector2( 3.00499, 7.41193 )
-strength = 16
 
 [node name="wall5" parent="." instance=ExtResource( 3 )]
 
