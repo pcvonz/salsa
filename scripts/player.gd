@@ -30,6 +30,7 @@ func _fixed_process(delta):
 	elapsed_time += delta
 	for object in get_colliding_bodies():
 		if object.is_in_group('players'):
+			#This bit slows down the damage taken when colliding with other players
 			if elapsed_time > .2:
 				add_ammo(-10)
 				elapsed_time = 0
@@ -37,6 +38,11 @@ func _fixed_process(delta):
 		set_pos(Vector2(get_pos().x + 2, get_pos().y))
 	if check_static_collide() and Input.is_action_pressed(left):
 		set_pos(Vector2(get_pos().x - 2, get_pos().y))
+	if(ammo <= 0):
+		#Remove the player if they run out of ammo 
+		#(eventually an animation will be played here 
+		#instead and then they would queue free)
+		queue_free()
 	
 func _input(ev):
 	if(Input.is_action_pressed(up)):

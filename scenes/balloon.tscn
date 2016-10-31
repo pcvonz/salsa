@@ -1,19 +1,13 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scripts/balloon.gd" type="Script" id=1]
-[ext_resource path="res://scripts/energy.gd" type="Script" id=2]
-[ext_resource path="res://art/energy.png" type="Texture" id=3]
-[ext_resource path="res://art/balloon.png" type="Texture" id=4]
+[ext_resource path="res://art/balloon.png" type="Texture" id=2]
+[ext_resource path="res://scenes/energy.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 18.4572
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 19.9795, 10 )
 
 [node name="Balloon" type="Area2D" groups=[ "balloons" ]]
 
@@ -34,36 +28,12 @@ shape = SubResource( 1 )
 trigger = true
 _update_shape_index = 0
 
-[node name="energy" type="Area2D" parent="."]
-
-transform/pos = Vector2( 0, 50 )
-input/pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, -0.581139, -2.51826 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-script/script = ExtResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="energy"]
-
-transform/pos = Vector2( -0.427186, -2.44637 )
-transform/scale = Vector2( 0.316196, 0.316196 )
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="energy"]
-
-transform/pos = Vector2( -0.581139, -2.51826 )
-shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
-
 [node name="Sprite" type="Sprite" parent="."]
 
 transform/pos = Vector2( -0.0232482, -8.75369 )
 transform/scale = Vector2( 0.784635, 0.784635 )
-texture = ExtResource( 4 )
+texture = ExtResource( 2 )
+
+[node name="energy" parent="." instance=ExtResource( 3 )]
 
 
