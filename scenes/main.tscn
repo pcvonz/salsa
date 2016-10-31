@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
-[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/balloon.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/wall.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/player2.scn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/balloon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/breakable_wall.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,32 +14,25 @@ extents = Vector2( 543.555, 10 )
 
 transform/pos = Vector2( 300, 150 )
 script/script = ExtResource( 1 )
-player_count = 1
 
-[node name="player1" parent="." instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 17.4774, -1.58885 )
-ammo = 200
-
-[node name="Balloon" parent="." instance=ExtResource( 3 )]
+[node name="Balloon" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( -109.727, -55.5949 )
-linear_damp = 0.1
 
-[node name="Balloon 2" parent="." instance=ExtResource( 3 )]
+[node name="Balloon 2" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 558.887, -70.3235 )
-linear_damp = 0.1
 
 [node name="label1" type="Label" parent="."]
 
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
 margin/left = -297.0
 margin/top = -146.0
 margin/right = -257.0
 margin/bottom = -133.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -66,35 +58,46 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="wall 2" parent="." instance=ExtResource( 4 )]
+[node name="wall 2" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 727.293, 120.59 )
 transform/rot = 90.0
 
-[node name="wall3" parent="." instance=ExtResource( 4 )]
+[node name="wall3" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -338.663, 107.636 )
+transform/pos = Vector2( -289.553, 108.864 )
 transform/rot = 90.0
-
-[node name="player2" parent="." instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 377.526, -12.9543 )
 
 [node name="label2" type="Label" parent="."]
 
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
 margin/left = 593.0
 margin/top = -146.0
 margin/right = 633.0
 margin/bottom = -133.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="wall4" parent="." instance=ExtResource( 4 )]
+[node name="wall4" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1.85077, -147.75 )
+
+[node name="Area2D" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 536.915, 365.572 )
+transform/scale = Vector2( 3.00499, 7.41193 )
+strength = 16
+
+[node name="wall5" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 852.827, 274.662 )
+
+[node name="Balloon3" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 665.515, 350.038 )
 
 
