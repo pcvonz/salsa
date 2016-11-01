@@ -15,6 +15,7 @@ func _fixed_process(delta):
 		set_pos(Vector2(get_pos().x, get_pos().y + 2))
 
 func _on_body_enter(body):
+	print("hello")
 	if(body.is_in_group('bullets')):
 		if get_parent().is_in_group('balloons'):
 			get_parent().floating_away()

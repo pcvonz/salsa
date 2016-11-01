@@ -18,6 +18,7 @@ var left
 var shoot
 var elapsed_time = 0
 
+var name
 var label
 func check_static_collide():
 	for object in get_colliding_bodies():
@@ -74,7 +75,7 @@ func _input(ev):
 		
 func add_ammo(count):
 	ammo += count
-	label.set_text(get_name() + ' energy: ' + str(ammo))
+	label.set_text(name + ' energy: ' + str(ammo))
 	
 func _ready():
 	if(get_name() == 'player1'):
@@ -84,6 +85,7 @@ func _ready():
 		left = "left1"
 		shoot = "shoot1"
 		label = get_parent().get_node('label1')
+		name = "player 1"
 	else:
 		up = "up2"
 		down = "down2"
@@ -91,6 +93,7 @@ func _ready():
 		left = "left2"
 		shoot = "shoot2"
 		label = get_parent().get_node('label2')
+		name = "player 2"
 	bullet = preload('res://scenes/bullet.tscn').instance()
 	set_process_input(true)
 	set_fixed_process(true)
