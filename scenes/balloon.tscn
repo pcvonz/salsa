@@ -20,6 +20,9 @@ gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 script/script = ExtResource( 1 )
+moving = false
+moving_dist = 10
+period = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
