@@ -12,9 +12,10 @@ func _ready():
 		var player_duplicate = player.duplicate()
 		player_duplicate.set_pos(Vector2(start_pos, player_duplicate.get_pos().y))
 		start_pos += 100
+		player_duplicate.add_to_group("players")
 		call_deferred("add_child", player_duplicate)
 	set_process(true)
-	
+
 func _process(delta):
 	#Win condition is all energy tanks have been picked up
 	#All energy tanks are in the group "energy"

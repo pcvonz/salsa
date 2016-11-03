@@ -6,7 +6,7 @@ export var moving_dist = 2
 export var period = .5
 var time_elapsed = 0
 var original_pos = get_pos()
-var move_to
+var move_to = Vector2(0,0)
 # member variables here, example:
 # var a=2
 # var b="textvar"

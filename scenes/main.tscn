@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/breakable_wall.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/energy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/balloon_energy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/follow_missile.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -94,9 +95,29 @@ transform/pos = Vector2( 669.804, 390.238 )
 
 [node name="balloon_energy" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( -136.714, 106.813 )
-moving = true
+transform/pos = Vector2( 461.391, 26.813 )
 moving_dist = 10
 period = 2.0
+
+[node name="follow_missile" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 164, 352 )
+mass = 28.321
+max_speed = 162.755
+mass = 28.321
+
+[node name="follow_missile1" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -67, 123 )
+mass = 92.376
+max_speed = 67.276
+mass = 92.376
+
+[node name="follow_missile2" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 571, 163 )
+mass = 30.129
+max_speed = 67.276
+mass = 30.129
 
 

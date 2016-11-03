@@ -16,7 +16,6 @@ func _on_body_enter(body):
 		if get_parent().is_in_group('balloons'):
 			get_parent().floating_away()
 		queue_free()
-	
 
 func _ready():
 	set_fixed_process(true)
