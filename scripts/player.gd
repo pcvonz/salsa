@@ -35,6 +35,12 @@ func _fixed_process(delta):
 			if elapsed_time > .2:
 				add_ammo(-10)
 				elapsed_time = 0
+		if object.is_in_group('enemies'):
+			#This is more of a placeholder for things like helicopters, etc.
+			#The time counter here will probably be replaced with some kind of stun timer.
+			if elapsed_time > .2:
+				add_ammo(-50)
+				elapsed_time = 0
 	if check_static_collide() and Input.is_action_pressed(right):
 		set_pos(Vector2(get_pos().x + 2, get_pos().y))
 	if check_static_collide() and Input.is_action_pressed(left):
