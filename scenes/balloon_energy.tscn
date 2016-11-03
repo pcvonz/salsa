@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://scripts/balloon_energy.gd" type="Script" id=1]
+[ext_resource path="res://scenes/balloon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/energy.tscn" type="PackedScene" id=3]
+
+[node name="balloon_energy" type="Node2D"]
+
+script/script = ExtResource( 1 )
+moving = false
+moving_dist = 2
+period = 0.5
+
+[node name="Balloon" parent="." instance=ExtResource( 2 )]
+
+[node name="energy" parent="." instance=ExtResource( 3 )]
+
+mode = 1
+
+
