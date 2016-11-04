@@ -1,11 +1,21 @@
 
 extends RigidBody2D
 
+#Constants
+const MAXSPEED = 600
+const UP  = PI/2	#set up directional constants to avoid having to figure out pi/2 for each dir or whatever
+const LEFT = PI
+const RIGHT = 0
+const DOWN = -PI/2
+
 # member variables here, example:
 # var a=2
 # var b="textvar"
+
+var cur_velocity
 var shoot_vector = Vector2(0, -200)
-var direction = PI
+var move_vector
+var direction = LEFT
 export var ammo = 200 
 var bullet
 var damage = false
@@ -27,7 +37,10 @@ func check_static_collide():
 	return false
 	
 func _fixed_process(delta):
-	set_rot(direction)
+	set_rot(direction)	##Why are we setting the rotation every loop?
+	cur_velocity = get_linear_velocity()	#test for maxspeed
+	if (get_linear_velocity().abs() > (MAXSPEED * cur_velocity.normalized()).abs()):
+		set_linear_velocity(MAXSPEED * cur_velocity.normalized());		#Hopefully should only call in 1 frame and then not call unless past maxspeed again, to avoid physics issues with multithreading
 	elapsed_time += delta
 	for object in get_colliding_bodies():
 		if object.is_in_group('players'):
@@ -41,7 +54,7 @@ func _fixed_process(delta):
 			if elapsed_time > .2:
 				add_ammo(-50)
 				elapsed_time = 0
-	if check_static_collide() and Input.is_action_pressed(right):
+	if check_static_collide() and Input.is_action_pressed(right):	#Movement is independent of direction pressed, so I don't know if checking input is the best aproach
 		set_pos(Vector2(get_pos().x + 2, get_pos().y))
 	if check_static_collide() and Input.is_action_pressed(left):
 		set_pos(Vector2(get_pos().x - 2, get_pos().y))
@@ -54,21 +67,21 @@ func _fixed_process(delta):
 func _input(ev):
 	if(Input.is_action_pressed(up)):
 		shoot_vector = Vector2(0, 200)
-		direction = PI/2
+		direction = UP
 		set_rot(direction)
 	if(Input.is_action_pressed(left)):
 		shoot_vector = Vector2(200, 0)
-		direction = PI
+		direction = LEFT
 		set_rot(direction)
 		
 			
 	if(Input.is_action_pressed(right)):
 		shoot_vector = Vector2(-200, 0)
-		direction = 0
+		direction = RIGHT
 		set_rot(direction)
 	if(Input.is_action_pressed(down)):
 		shoot_vector = Vector2(0, -200)
-		direction = -PI/2
+		direction = DOWN
 		set_rot(direction)
 	if ev.is_action_pressed(shoot) and ammo > 0:
 		var bullet_duplicate = bullet.duplicate()
