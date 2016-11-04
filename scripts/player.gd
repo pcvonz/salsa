@@ -14,7 +14,6 @@ const DOWN = -PI/2
 
 var cur_velocity
 var shoot_vector = Vector2(0, -200)
-var move_vector
 var direction = LEFT
 export var ammo = 200 
 var bullet
