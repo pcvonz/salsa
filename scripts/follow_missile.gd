@@ -34,6 +34,7 @@ func _fixed_process(delta):
 		if(players.size() > 0):
 			SteeringForce += Steering.seek(target, self)
 			Vehicle.update(delta, SteeringForce)
+			look_at(get_global_pos() - get_linear_velocity().normalized())
 			set_linear_velocity(Vehicle.velocity)
 
 	

@@ -39,7 +39,7 @@ max_turn_rate = 1.0
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0, 0.373111 )
+transform/pos = Vector2( 0, -6.62689 )
 transform/scale = Vector2( 0.253778, 0.253778 )
 texture = ExtResource( 2 )
 
