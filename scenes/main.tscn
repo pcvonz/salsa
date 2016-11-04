@@ -95,7 +95,7 @@ transform/pos = Vector2( 669.804, 390.238 )
 
 [node name="balloon_energy" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 461.391, 26.813 )
+transform/pos = Vector2( 198.391, -63.187 )
 moving_dist = 10
 period = 2.0
 

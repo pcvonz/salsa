@@ -61,6 +61,7 @@ func _fixed_process(delta):
 		#Remove the player if they run out of ammo 
 		#(eventually an animation will be played here 
 		#instead and then they would queue free)
+		remove_from_group("players")
 		queue_free()
 	
 func _input(ev):

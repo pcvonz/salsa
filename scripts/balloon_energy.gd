@@ -30,6 +30,6 @@ func _fixed_process(delta):
 		
 func _ready():
 	set_fixed_process(true)
-	get_node("energy").set_mode(1)
+	get_node("energy").set_mode(3)
 
 
