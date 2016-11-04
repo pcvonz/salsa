@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scripts/follow_missile.gd" type="Script" id=1]
+[ext_resource path="res://art/missile.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -37,6 +38,10 @@ max_force = 1.0
 max_turn_rate = 1.0
 
 [node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 0.373111 )
+transform/scale = Vector2( 0.253778, 0.253778 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
