@@ -11,7 +11,7 @@ func slow_down(body):
 
 func remove_slow(body):
 	if(body.is_in_group("players") or body.is_in_group("enemies")):
-		body.speed_multiplier = speed
+		body.speed_multiplier = 1
 
 func _ready():
 	connect("body_enter", self, "slow_down")
