@@ -11,7 +11,7 @@ export var max_speed = 1.0
 export var mass = 50.0 
 export var max_force = 1.0
 export var max_turn_rate = 1.0
-
+var speed_multiplier = 1
 func _ready():
 	set_fixed_process(true)
 	Vehicle = Vehicle.new(mass, max_speed, max_force, max_turn_rate)
@@ -33,7 +33,7 @@ func _fixed_process(delta):
 			find_closest_player()
 		if(players.size() > 0):
 			SteeringForce += Steering.seek(target, self)
-			Vehicle.update(delta, SteeringForce)
+			Vehicle.update(delta, SteeringForce, speed_multiplier)
 			look_at(get_global_pos() - get_linear_velocity().normalized())
 			set_linear_velocity(Vehicle.velocity)
 

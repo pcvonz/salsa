@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/energy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/balloon_energy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/follow_missile.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/vine.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -101,121 +102,14 @@ period = 2.0
 
 [node name="follow_missile" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 164, 352 )
+transform/pos = Vector2( 483, 80 )
 mass = 28.321
 max_speed = 162.755
 mass = 28.321
 
-[node name="follow_missile3" parent="." instance=ExtResource( 6 )]
+[node name="vine" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 368, 193 )
-mass = 28.321
-max_speed = 162.755
-mass = 28.321
-
-[node name="follow_missile4" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 48, 154 )
-mass = 28.321
-max_speed = 162.755
-mass = 28.321
-
-[node name="follow_missile5" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( -108, -42 )
-mass = 28.321
-max_speed = 162.755
-mass = 28.321
-
-[node name="follow_missile6" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( -108, -42 )
-mass = 28.321
-max_speed = 162.755
-mass = 28.321
-
-[node name="follow_missile1" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( -67, 123 )
-mass = 92.376
-max_speed = 67.276
-mass = 92.376
-
-[node name="follow_missile2" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 571, 163 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
-
-[node name="follow_missile7" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 571, 80 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
-
-[node name="follow_missile8" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 609, 5 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
-
-[node name="follow_missile9" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 554, -43 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
-
-[node name="follow_missile10" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 623, 76 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
-
-[node name="follow_missile11" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 646, -10 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
-
-[node name="follow_missile12" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 608, -88 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
-
-[node name="follow_missile13" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 526, 13 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
-
-[node name="follow_missile14" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 522, 85 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
-
-[node name="follow_missile15" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 636, 135 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
-
-[node name="follow_missile16" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 636, 135 )
-mass = 30.129
-max_speed = 67.276
-mass = 30.129
+transform/pos = Vector2( 33, -3 )
+speed = 0.2
 
 

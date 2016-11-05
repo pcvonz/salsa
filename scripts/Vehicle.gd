@@ -14,13 +14,13 @@ var MAX_FORCE
 var MAX_TURN_RATE
 var Steering = load("/scripts/steering.gd")
 
-func update(time_elapsed, SteeringForce):
+func update(time_elapsed, SteeringForce, slow):
 	#f=ma -> a=f/a
 	var acceleration = SteeringForce / MASS
 	velocity  += acceleration * time_elapsed
 	#Need to figure out a way to truncate a vector
-	if velocity.length() > MAX_SPEED:
-		 velocity = velocity.normalized()*MAX_SPEED
+	if velocity.length() > (MAX_SPEED * slow):
+		 velocity = velocity.normalized()*(MAX_SPEED * slow)
 	#position += velocity * time_elapsed
 	
 	#Update the heading

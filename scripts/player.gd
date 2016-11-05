@@ -27,6 +27,7 @@ var left
 var shoot
 var elapsed_time = 0
 
+var speed_multiplier = 1
 var name
 var label
 func check_static_collide():
@@ -38,8 +39,8 @@ func check_static_collide():
 func _fixed_process(delta):
 	set_rot(direction)	##Why are we setting the rotation every loop?
 	cur_velocity = get_linear_velocity()	#test for maxspeed
-	if (get_linear_velocity().abs() > (MAXSPEED * cur_velocity.normalized()).abs()):
-		set_linear_velocity(MAXSPEED * cur_velocity.normalized());		#Hopefully should only call in 1 frame and then not call unless past maxspeed again, to avoid physics issues with multithreading
+	if (get_linear_velocity().abs() > ((MAXSPEED * speed_multiplier) * cur_velocity.normalized()).abs()):
+		set_linear_velocity((MAXSPEED*speed_multiplier) * cur_velocity.normalized());		#Hopefully should only call in 1 frame and then not call unless past maxspeed again, to avoid physics issues with multithreading
 	elapsed_time += delta
 	for object in get_colliding_bodies():
 		if object.is_in_group('players'):
