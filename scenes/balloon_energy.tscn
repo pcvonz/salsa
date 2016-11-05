@@ -7,7 +7,8 @@
 [node name="balloon_energy" type="Node2D"]
 
 script/script = ExtResource( 1 )
-moving = false
+moving = true
+preview_movement = false
 moving_dist = 2
 period = 0.5
 
@@ -15,6 +16,6 @@ period = 0.5
 
 [node name="energy" parent="." instance=ExtResource( 3 )]
 
-mode = 1
+mode = 3
 
 

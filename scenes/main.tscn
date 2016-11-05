@@ -97,19 +97,17 @@ transform/pos = Vector2( 669.804, 390.238 )
 [node name="balloon_energy" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 198.391, -63.187 )
-moving_dist = 10
 period = 2.0
 
 [node name="follow_missile" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 483, 80 )
 mass = 28.321
-max_speed = 162.755
+max_speed = 0.0
 mass = 28.321
 
 [node name="vine" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 33, -3 )
-speed = 0.2
+transform/pos = Vector2( -114, -38 )
 
 
