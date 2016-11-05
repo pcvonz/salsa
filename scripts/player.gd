@@ -18,6 +18,7 @@ var direction = LEFT
 export var ammo = 200 
 var bullet
 var damage = false
+var gravity_scale = 3 #Can change to make lighter/heavier based on tile
 
 #controls
 var up
@@ -37,6 +38,8 @@ func check_static_collide():
 	return false
 	
 func _fixed_process(delta):
+	is_contact_monitor_enabled()
+	set_gravity_scale(gravity_scale)
 	set_rot(direction)	##Why are we setting the rotation every loop?
 	cur_velocity = get_linear_velocity()	#test for maxspeed
 	if (get_linear_velocity().abs() > ((MAXSPEED * speed_multiplier) * cur_velocity.normalized()).abs()):
@@ -90,7 +93,7 @@ func _input(ev):
 		bullet_duplicate.set_global_pos(Vector2(get_node('Position2D').get_global_pos().x, get_node('Position2D').get_global_pos().y))
 		apply_impulse(get_pos(), shoot_vector)
 		bullet_duplicate.player_origin = get_name()
-		bullet_duplicate.apply_impulse(bullet_duplicate.get_global_pos(), (-shoot_vector.normalized()*1500) )
+		bullet_duplicate.apply_impulse(bullet_duplicate.get_global_pos(), (-shoot_vector.normalized()*500) )
 		add_ammo(-1)
 		
 func add_ammo(count):
@@ -98,6 +101,7 @@ func add_ammo(count):
 	label.set_text(name + ' energy: ' + str(ammo))
 	
 func _ready():
+	set_continuous_collision_detection_mode(CCD_MODE_CAST_SHAPE)	#Slower collision detection, but more precise, which is what we want for this I think?
 	if(get_name() == 'player1'):
 		up = "up1"
 		down = "down1"
