@@ -32,6 +32,11 @@ var elapsed_time = 0
 var speed_multiplier = 1
 var name
 var label
+func check_static_collide():
+	for object in get_colliding_bodies():
+		if object.get_type() == 'StaticBody2D':
+			return true	
+	return false
 	
 func _fixed_process(delta):
 	is_contact_monitor_enabled()
@@ -53,7 +58,10 @@ func _fixed_process(delta):
 			if elapsed_time > .2:
 				add_ammo(-50)
 				elapsed_time = 0
-
+	if check_static_collide() and Input.is_action_pressed(right):	#Movement is independent of direction pressed, so I don't know if checking input is the best aproach
+		set_pos(Vector2(get_pos().x + 2, get_pos().y))
+	if check_static_collide() and Input.is_action_pressed(left):
+		set_pos(Vector2(get_pos().x - 2, get_pos().y))
 	if(ammo <= 0):
 		#Remove the player if they run out of ammo 
 		#(eventually an animation will be played here 
