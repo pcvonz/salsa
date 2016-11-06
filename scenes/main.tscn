@@ -103,11 +103,24 @@ period = 2.0
 
 transform/pos = Vector2( 483, 80 )
 mass = 28.321
-max_speed = 0.0
+max_speed = 100.0
 mass = 28.321
+die_on_bullet = true
 
 [node name="vine" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( -114, -38 )
+
+[node name="vine1" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( -38, -36 )
+
+[node name="vine2" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 15, -38 )
+
+[node name="vine3" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( -76, -38 )
 
 
