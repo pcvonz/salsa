@@ -36,7 +36,6 @@ max_lines_visible = -1
 
 [node name="wall" type="StaticBody2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 0, 450 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -104,7 +103,31 @@ period = 2.0
 
 [node name="follow_missile" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 483, 81.2277 )
+transform/pos = Vector2( -253.643, 390.276 )
+mass = 28.321
+max_speed = 100.0
+mass = 28.321
+immortal = false
+
+[node name="follow_missile2" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -231.544, 392.217 )
+mass = 28.321
+max_speed = 100.0
+mass = 28.321
+immortal = false
+
+[node name="follow_missile3" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -210.672, 388.011 )
+mass = 28.321
+max_speed = 100.0
+mass = 28.321
+immortal = false
+
+[node name="follow_missile4" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -191.028, 386.394 )
 mass = 28.321
 max_speed = 100.0
 mass = 28.321
@@ -112,34 +135,57 @@ immortal = false
 
 [node name="vine" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( -114, -38 )
+transform/pos = Vector2( 374.64, 356.104 )
+speed_multiplier = 0.2
 
 [node name="vine1" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( -38, -36 )
+speed_multiplier = 0.2
 
 [node name="vine2" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 15, -38 )
+speed_multiplier = 0.2
 
 [node name="vine3" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( -76, -38 )
+transform/pos = Vector2( 401.264, 354.906 )
+speed_multiplier = 0.2
+
+[node name="vine4" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 430.003, 354.906 )
+speed_multiplier = 0.2
 
 [node name="arrow_trap8" parent="." instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 626.146, 394.104 )
-transform/rot = -178.161
+transform/rot = -182.963
 arrow_speed = 1000
 
 [node name="arrow_trap9" parent="." instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 634.74, 219.765 )
-transform/rot = -214.805
+transform/pos = Vector2( 580.72, 200.121 )
+transform/rot = -175.813
+arrow_speed = 1000
+
+[node name="arrow_trap10" parent="." instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 573.354, 131.368 )
+transform/rot = -175.813
 arrow_speed = 1000
 
 [node name="spike" parent="." instance=ExtResource( 9 )]
 
-transform/pos = Vector2( 282, 80 )
+transform/pos = Vector2( 382.145, 458.266 )
+
+[node name="spike2" parent="." instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 404.044, 458.266 )
+
+[node name="spike3" parent="." instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 427.111, 458.266 )
 
 

@@ -19,6 +19,10 @@ export var immortal = false
 export var die_on_bullet = false
 
 var speed_multiplier = 1
+
+func set_speed_multiplier(new_multiplier):
+	speed_multiplier = new_multiplier
+
 func _ready():
 	set_fixed_process(true)
 	Vehicle = Vehicle.new(mass, max_speed, max_force, max_turn_rate)

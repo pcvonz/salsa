@@ -32,6 +32,10 @@ var elapsed_time = 0
 var speed_multiplier = 1
 var name
 var label
+
+func set_speed_multiplier(new_multiplier):
+	speed_multiplier = new_multiplier
+
 func check_static_collide():
 	for object in get_colliding_bodies():
 		if object.get_type() == 'StaticBody2D':
