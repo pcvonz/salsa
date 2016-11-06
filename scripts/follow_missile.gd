@@ -11,11 +11,27 @@ export var max_speed = 1.0
 export var mass = 50.0 
 export var max_force = 1.0
 export var max_turn_rate = 1.0
+
+#If true, the enemy will not die when other bodies enter it's collisionshape
+export var persistent = true
+
+#if true the enemy will die when a bullet enters it's collision shape
+export var die_on_bullet = false
+
 var speed_multiplier = 1
 func _ready():
 	set_fixed_process(true)
 	Vehicle = Vehicle.new(mass, max_speed, max_force, max_turn_rate)
 	Steering = Steering.new(mass, max_speed, max_force, max_turn_rate)
+	connect("body_enter", self, "on_body_enter")
+
+func on_body_enter(body):
+	if persistent == false:
+		queue_free()
+	elif(die_on_bullet == true):
+		if(body.is_in_group("bullets")):
+			queue_free()
+		
 
 func find_closest_player():
 	for i in players:
