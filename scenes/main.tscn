@@ -128,4 +128,14 @@ transform/pos = Vector2( -76, -38 )
 
 transform/pos = Vector2( -260.28, 62.6147 )
 
+[node name="arrow_trap5" parent="." instance=ExtResource( 8 )]
+
+transform/pos = Vector2( -98.219, 246.775 )
+transform/rot = 16.3233
+
+[node name="arrow_trap6" parent="." instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 561.076, -121.546 )
+transform/rot = -137.284
+
 

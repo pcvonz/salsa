@@ -16,7 +16,8 @@ func _ready():
 
 func _process(delta):
 	if(ray.is_colliding() and is_triggered == false):
-		arrow.set_linear_velocity(Vector2(1000, 0))
+		print(get_rot())
+		arrow.set_linear_velocity(Vector2(cos(get_rot()), sin(-get_rot()))*1000)
 		arrow.set_gravity_scale(1)
 		is_triggered = true
 	if(is_triggered == true):
