@@ -15,6 +15,7 @@ func _fixed_process(delta):
 		floating_away = true
 	if(floating_away == true):
 		set_pos(Vector2(get_pos().x, get_pos().y - 2))
+		
 
 func drop_energy(body):
 	if(get_parent().has_node("energy")):
