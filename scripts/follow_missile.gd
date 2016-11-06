@@ -13,7 +13,7 @@ export var max_force = 1.0
 export var max_turn_rate = 1.0
 
 #If true, the enemy will not die when other bodies enter it's collisionshape
-export var persistent = true
+export var immortal = false
 
 #if true the enemy will die when a bullet enters it's collision shape
 export var die_on_bullet = false
@@ -26,7 +26,7 @@ func _ready():
 	connect("body_enter", self, "on_body_enter")
 
 func on_body_enter(body):
-	if persistent == false:
+	if immortal == false:
 		queue_free()
 	elif(die_on_bullet == true):
 		if(body.is_in_group("bullets")):

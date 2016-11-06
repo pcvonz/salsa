@@ -104,11 +104,11 @@ period = 2.0
 
 [node name="follow_missile" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 483, 80 )
+transform/pos = Vector2( 483, 81.2277 )
 mass = 28.321
 max_speed = 100.0
 mass = 28.321
-die_on_bullet = true
+immortal = false
 
 [node name="vine" parent="." instance=ExtResource( 7 )]
 
