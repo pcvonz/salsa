@@ -54,6 +54,6 @@ transform/pos = Vector2( 15, 0 )
 enabled = true
 cast_to = Vector2( 1000, 0 )
 layer_mask = 1
-type_mask = 14
+type_mask = 15
 
 

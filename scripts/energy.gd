@@ -7,7 +7,7 @@ extends RigidBody2D
 
 func _on_body_enter(body):
 	print("hello")
-	if(body.is_in_group('bullets')):
+	if(body.is_in_group('bullets') or body.is_in_group("enemies")):
 		if get_parent().is_in_group('balloons'):
 			get_parent().floating_away()
 		queue_free()

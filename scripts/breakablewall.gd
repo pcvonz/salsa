@@ -5,7 +5,7 @@ extends RigidBody2D
 # var a=2
 # var b="textvar"
 
-export var strength = 20
+export var strength = 1
 
 func _break_wall(body):
 	print('hello')

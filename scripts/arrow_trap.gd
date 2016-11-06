@@ -15,16 +15,15 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	if(ray.is_colliding() and is_triggered == false):
-		print(get_rot())
+	if(ray.is_colliding() and is_triggered == false and not ray.get_collider() == null and not ray.get_collider().is_in_group("static_bodies")):
 		arrow.set_linear_velocity(Vector2(cos(get_rot()), sin(-get_rot()))*1000)
 		arrow.set_gravity_scale(1)
 		is_triggered = true
 	if(is_triggered == true):
 		elapsed_time += delta
-		print(arrow.get_linear_velocity().length() < 20)
 		if(arrow.get_linear_velocity().length() < 200):
-			arrow.remove_from_group("enemies")
+			if(arrow.is_in_group("enemies")):
+				arrow.remove_from_group("enemies")
 			if(elapsed_time > 5):
 				arrow.queue_free()
 				set_process(false)

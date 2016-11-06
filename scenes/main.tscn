@@ -38,7 +38,7 @@ max_lines_visible = -1
 transform/pos = Vector2( 0, 450 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 198.016, 0.00012207 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 199.244, 0.00012207 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -49,7 +49,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
 
-transform/pos = Vector2( 198.016, 0.00012207 )
+transform/pos = Vector2( 199.244, 0.00012207 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
@@ -82,7 +82,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 1.85077, -147.75 )
 
-[node name="Area2D" parent="." instance=ExtResource( 3 )]
+[node name="Area2D" parent="." groups=[ "static_bodies" ] instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 536.915, 365.572 )
 transform/scale = Vector2( 3.00499, 7.41193 )
@@ -97,7 +97,7 @@ transform/pos = Vector2( 669.804, 390.238 )
 
 [node name="balloon_energy" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 198.391, -63.187 )
+transform/pos = Vector2( 249.956, -66.8702 )
 period = 2.0
 
 [node name="follow_missile" parent="." instance=ExtResource( 6 )]
@@ -124,18 +124,14 @@ transform/pos = Vector2( 15, -38 )
 
 transform/pos = Vector2( -76, -38 )
 
-[node name="arrow_trap4" parent="." instance=ExtResource( 8 )]
+[node name="arrow_trap8" parent="." instance=ExtResource( 8 )]
 
-transform/pos = Vector2( -260.28, 62.6147 )
+transform/pos = Vector2( 626.146, 394.104 )
+transform/rot = -178.161
 
-[node name="arrow_trap5" parent="." instance=ExtResource( 8 )]
+[node name="arrow_trap9" parent="." instance=ExtResource( 8 )]
 
-transform/pos = Vector2( -98.219, 246.775 )
-transform/rot = 16.3233
-
-[node name="arrow_trap6" parent="." instance=ExtResource( 8 )]
-
-transform/pos = Vector2( 561.076, -121.546 )
-transform/rot = -137.284
+transform/pos = Vector2( 634.74, 219.765 )
+transform/rot = -214.805
 
 

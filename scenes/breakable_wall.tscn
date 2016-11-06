@@ -24,14 +24,14 @@ custom_integrator = false
 continuous_cd = 0
 contacts_reported = 1
 contact_monitor = true
-sleeping = false
+sleeping = true
 can_sleep = true
 velocity/linear = Vector2( 0, 0 )
 velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
 script/script = ExtResource( 1 )
-strength = 20
+strength = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
