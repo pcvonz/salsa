@@ -7,14 +7,19 @@ extends Node2D
 var start_pos = 100
 func _ready():
 	var player_count = get_node("/root/global").player_count
-	var player = preload('res://scenes/player.tscn').instance()
-	for i in range(0, player_count):
-		var player_duplicate = player.duplicate()
-		player_duplicate.set_pos(Vector2(start_pos, player_duplicate.get_pos().y))
-		start_pos += 100
-		player_duplicate.add_to_group("players")
-		call_deferred("add_child", player_duplicate)
+	var player_1 = preload('res://scenes/player1.tscn').instance()
+	
+#	player_1._init("up1", "down1", "right1", "left1", "shoot1", get_node("label1"), "player 1")
+	var player_2 = preload('res://scenes/player2.tscn').instance()
+#	player_2.init("up2", "down2", "right2", "left2", "shoot2", get_node("label2"), "player 1")
+	add_child(player_1)
+	player_1.set_global_pos(get_node("player1_start").get_global_pos())
+	if(player_count == 2):
+		add_child(player_2)
+		player_2.set_global_pos(get_node("player2_start").get_global_pos())
 	set_process(true)
+
+
 
 func _process(delta):
 	#Win condition is all energy tanks have been picked up

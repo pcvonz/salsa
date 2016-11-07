@@ -188,4 +188,12 @@ transform/pos = Vector2( 404.044, 458.266 )
 
 transform/pos = Vector2( 427.111, 458.266 )
 
+[node name="player1_start" type="Position2D" parent="."]
+
+transform/pos = Vector2( -208.716, -45.4264 )
+
+[node name="player2_start" type="Position2D" parent="."]
+
+transform/pos = Vector2( -108.716, -45.4264 )
+
 

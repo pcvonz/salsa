@@ -16,17 +16,17 @@ var cur_velocity
 var shoot_vector = Vector2(0, -200)
 var move_vector
 var direction = LEFT
-export var ammo = 200 
+export var ammo = 200
 var bullet
 var damage = false
 var gravity_scale = 3 #Can change to make lighter/heavier based on tile
 
 #controls
-var up
-var down
-var right
-var left
-var shoot
+var up = ""
+var down = ""
+var right = ""
+var left = ""
+var shoot = ""
 var elapsed_time = 0
 
 var speed_multiplier = 1
@@ -39,9 +39,9 @@ func set_speed_multiplier(new_multiplier):
 func check_static_collide():
 	for object in get_colliding_bodies():
 		if object.get_type() == 'StaticBody2D':
-			return true	
+			return true
 	return false
-	
+
 func _fixed_process(delta):
 	is_contact_monitor_enabled()
 	set_gravity_scale(gravity_scale)
@@ -67,12 +67,12 @@ func _fixed_process(delta):
 	if check_static_collide() and Input.is_action_pressed(left):
 		set_pos(Vector2(get_pos().x - 2, get_pos().y))
 	if(ammo <= 0):
-		#Remove the player if they run out of ammo 
-		#(eventually an animation will be played here 
+		#Remove the player if they run out of ammo
+		#(eventually an animation will be played here
 		#instead and then they would queue free)
 		remove_from_group("players")
 		queue_free()
-	
+
 func _input(ev):
 	if(Input.is_action_pressed(up)):
 		shoot_vector = Vector2(0, 200)
@@ -82,8 +82,8 @@ func _input(ev):
 		shoot_vector = Vector2(200, 0)
 		direction = LEFT
 		set_rot(direction)
-		
-			
+
+
 	if(Input.is_action_pressed(right)):
 		shoot_vector = Vector2(-200, 0)
 		direction = RIGHT
@@ -100,31 +100,23 @@ func _input(ev):
 		bullet_duplicate.player_origin = get_name()
 		bullet_duplicate.apply_impulse(bullet_duplicate.get_global_pos(), (-shoot_vector.normalized()*500) )
 		add_ammo(-1)
-		
+
 func add_ammo(count):
 	ammo += count
 	label.set_text(name + ' energy: ' + str(ammo))
-	
+
+func set_controls(up, down, right, left, shoot, label, name):
+	self.up = up
+	self.down = down
+	self.right = right
+	self.left = left
+	self.shoot = shoot
+	self.label = label
+	self.name = name
+
 func _ready():
 	set_continuous_collision_detection_mode(CCD_MODE_CAST_SHAPE)	#Slower collision detection, but more precise, which is what we want for this I think?
-	if(get_name() == 'player1'):
-		up = "up1"
-		down = "down1"
-		right = "right1"
-		left = "left1"
-		shoot = "shoot1"
-		label = get_parent().get_node('label1')
-		name = "player 1"
-	else:
-		up = "up2"
-		down = "down2"
-		right = "right2"
-		left = "left2"
-		shoot = "shoot2"
-		label = get_parent().get_node('label2')
-		name = "player 2"
 	bullet = preload('res://scenes/bullet.tscn').instance()
 	set_process_input(true)
 	set_fixed_process(true)
-	add_ammo(0)
 
