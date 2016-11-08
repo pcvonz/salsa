@@ -11,6 +11,8 @@ extents = Vector2( 10, 10 )
 [node name="arrow_trap" type="Node2D"]
 
 script/script = ExtResource( 1 )
+arrow_speed = 1000
+persistent = true
 
 [node name="arrow" type="RigidBody2D" parent="." groups=[ "enemies" ]]
 
@@ -27,8 +29,8 @@ bounce = 0.0
 gravity_scale = 0.0
 custom_integrator = false
 continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
+contacts_reported = 1
+contact_monitor = true
 sleeping = false
 can_sleep = true
 velocity/linear = Vector2( 0, 0 )
@@ -52,6 +54,7 @@ texture = ExtResource( 2 )
 
 transform/pos = Vector2( 15, 0 )
 enabled = true
+exclude_parent = true
 cast_to = Vector2( 1000, 0 )
 layer_mask = 1
 type_mask = 15

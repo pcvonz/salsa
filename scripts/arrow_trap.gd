@@ -9,10 +9,16 @@ var ray
 var arrow
 var is_triggered = false
 var elapsed_time = 0
+export var persistent = true
+var speed_multiplier = 1
+
 func _ready():
 	ray = get_node("RayCast2D")
 	arrow = get_node("arrow")
 	set_process(true)
+
+func set_speed_multiplier(multiplier):
+	speed_multiplier = multiplier
 
 func _process(delta):
 	if(ray.is_colliding() and is_triggered == false and not ray.get_collider() == null and not ray.get_collider().is_in_group("static_bodies")):
@@ -24,7 +30,7 @@ func _process(delta):
 		if(arrow.get_linear_velocity().length() < 200):
 			if(arrow.is_in_group("enemies")):
 				arrow.remove_from_group("enemies")
-			if(elapsed_time > 5):
+			if(elapsed_time > 5 and persistent == false):
 				arrow.queue_free()
 				set_process(false)
 			

@@ -13,7 +13,7 @@ const DOWN = -PI/2
 # var b="textvar"
 
 var cur_velocity
-var shoot_vector = Vector2(0, -200)
+var shoot_vector = Vector2(-200, 0)
 var move_vector
 var direction = LEFT
 export var ammo = 200
@@ -38,7 +38,7 @@ func set_speed_multiplier(new_multiplier):
 
 func check_static_collide():
 	for object in get_colliding_bodies():
-		if object.get_type() == 'StaticBody2D':
+		if object.get_type() == 'TileMap':
 			return true
 	return false
 

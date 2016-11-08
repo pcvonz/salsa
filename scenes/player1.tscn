@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://scripts/player_1.gd" type="Script" id=1]
+[ext_resource path="res://art/sasa reboot concept 2.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10.5525, 26.0849 )
+
+[node name="player1" type="RigidBody2D" groups=[ "players" ]]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1.98437, 0, 0, 1.98437, 0.876997, -0.979388 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 2
+mass = 1.0
+friction = 1.0
+bounce = 0.2
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 5
+contact_monitor = true
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+script/script = ExtResource( 1 )
+ammo = 200
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0.876997, -0.979388 )
+transform/scale = Vector2( 1.98437, 1.98437 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Position2D" type="Position2D" parent="."]
+
+transform/pos = Vector2( 34.3948, 2.69318 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0.500213, -3.92949 )
+transform/scale = Vector2( 0.0715272, 0.0715272 )
+texture = ExtResource( 2 )
+
+
