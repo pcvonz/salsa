@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scripts/player_1.gd" type="Script" id=1]
-[ext_resource path="res://art/sasa reboot concept 2.png" type="Texture" id=2]
+[ext_resource path="res://art/character.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10.5525, 26.0849 )
+extents = Vector2( 17.2689, 21.1448 )
 
 [node name="player1" type="RigidBody2D" groups=[ "players" ]]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.98437, 0, 0, 1.98437, 0.876997, -0.979388 )
+shapes/0/transform = Matrix32( 1.98437, 0, 0, 1.98437, 0.559388, -0.0806632 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -36,7 +36,7 @@ ammo = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 0.876997, -0.979388 )
+transform/pos = Vector2( 0.559388, -0.0806632 )
 transform/scale = Vector2( 1.98437, 1.98437 )
 shape = SubResource( 1 )
 trigger = false
@@ -44,12 +44,12 @@ _update_shape_index = 0
 
 [node name="Position2D" type="Position2D" parent="."]
 
-transform/pos = Vector2( 34.3948, 2.69318 )
+transform/pos = Vector2( 39.3989, -5.27459 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.500213, -3.92949 )
-transform/scale = Vector2( 0.0715272, 0.0715272 )
+transform/pos = Vector2( -0.000973225, 0.0293331 )
+transform/scale = Vector2( 0.201502, 0.200573 )
 texture = ExtResource( 2 )
 
 
