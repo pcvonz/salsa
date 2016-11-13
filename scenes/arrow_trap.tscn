@@ -14,7 +14,7 @@ script/script = ExtResource( 1 )
 arrow_speed = 1000
 persistent = true
 
-[node name="arrow" type="RigidBody2D" parent="." groups=[ "enemies" ]]
+[node name="arrow" type="RigidBody2D" parent="." groups=[ "arrows", "enemies" ]]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -54,7 +54,6 @@ texture = ExtResource( 2 )
 
 transform/pos = Vector2( 15, 0 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 1000, 0 )
 layer_mask = 1
 type_mask = 15

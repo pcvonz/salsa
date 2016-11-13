@@ -44,7 +44,7 @@ _update_shape_index = 0
 
 [node name="Position2D" type="Position2D" parent="."]
 
-transform/pos = Vector2( 39.3989, -5.27459 )
+transform/pos = Vector2( 43.6152, -4.22051 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
