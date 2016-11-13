@@ -34,7 +34,12 @@ func on_body_enter(body):
 		queue_free()
 	elif(die_on_bullet == true):
 		if(body.is_in_group("bullets")):
-			queue_free()
+			apply_impulse(body.get_global_pos(), -body.get_linear_velocity())
+			set_fixed_process(false)
+			add_collision_exception_with(get_node("../player1"))
+			remove_from_group("enemies")
+			add_to_group("bullets")
+			
 		
 
 func find_closest_player():

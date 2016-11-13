@@ -14,7 +14,7 @@ script/script = ExtResource( 1 )
 arrow_speed = 1000
 persistent = true
 
-[node name="arrow" type="RigidBody2D" parent="." groups=[ "arrows", "enemies" ]]
+[node name="arrow" type="RigidBody2D" parent="." groups=[ "bullets", "arrows", "enemies" ]]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )

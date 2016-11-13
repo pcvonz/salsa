@@ -71,12 +71,141 @@ transform/pos = Vector2( 669.804, 390.238 )
 transform/pos = Vector2( 249.956, -66.8702 )
 period = 2.0
 
-[node name="follow_missile2" parent="." instance=ExtResource( 5 )]
+[node name="follow_missile4" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 613.457, 39.2172 )
+transform/pos = Vector2( 578.554, -70.4905 )
 mass = 28.321
+max_speed = 200.0
 mass = 28.321
-immortal = false
+die_on_bullet = true
+
+[node name="follow_missile5" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 483.792, -41.6105 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile6" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 545.162, 33.2972 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile7" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 512.672, 23.3697 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile8" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 567.725, 5.31966 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile9" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 595.702, 28.7847 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile10" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 574.042, 68.4948 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile11" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 574.042, 107.302 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile12" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 622.777, 75.7148 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile13" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 637.217, 20.6622 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile14" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 612.85, -14.5354 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile15" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 537.942, -42.513 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile16" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 463.937, -80.4181 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile17" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 290.656, 49.5422 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile18" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 125.499, 82.9348 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile19" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 112.864, 112.717 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
+
+[node name="follow_missile20" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 112.864, 112.717 )
+mass = 28.321
+max_speed = 200.0
+mass = 28.321
+die_on_bullet = true
 
 [node name="vine" parent="." instance=ExtResource( 6 )]
 
@@ -121,42 +250,62 @@ transform/rot = -182.963
 [node name="arrow_trap10" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 628.362, 410.725 )
-transform/rot = -182.963
+transform/rot = -179.793
 
 [node name="arrow_trap11" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 626.146, 375.267 )
-transform/rot = -178.718
-
-[node name="arrow_trap9" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 304.145, 436.104 )
-transform/rot = -180.815
+transform/pos = Vector2( 587.997, 281.89 )
+transform/rot = -179.35
 
 [node name="arrow_trap12" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 308.577, 422.808 )
-transform/rot = -180.815
+transform/pos = Vector2( 589.225, 288.029 )
+transform/rot = -179.35
 
 [node name="arrow_trap13" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 4.97548, 181.256 )
-transform/rot = -150.044
+transform/pos = Vector2( 590.667, 298.735 )
+transform/rot = -179.35
 
 [node name="arrow_trap14" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 48.1889, 228.901 )
-transform/rot = -150.044
+transform/pos = Vector2( 589.594, 319.006 )
+transform/rot = -179.35
 
 [node name="arrow_trap15" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 73.6737, 252.17 )
-transform/rot = -150.044
+transform/pos = Vector2( 589.594, 336.177 )
+transform/rot = -179.35
 
 [node name="arrow_trap16" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 73.6737, 252.17 )
-transform/rot = -150.044
+transform/pos = Vector2( 590.238, 347.982 )
+transform/rot = -179.35
+
+[node name="arrow_trap17" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 590.238, 368.373 )
+transform/rot = -184.685
+
+[node name="arrow_trap18" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 590.238, 377.817 )
+transform/rot = -175.409
+
+[node name="arrow_trap19" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 592.813, 358.285 )
+transform/rot = -175.409
+
+[node name="arrow_trap20" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 596.892, 265.561 )
+transform/rot = -175.409
+
+[node name="arrow_trap21" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 602.472, 270.283 )
+transform/rot = -175.409
 
 [node name="spike" parent="." instance=ExtResource( 8 )]
 
