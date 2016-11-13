@@ -44,7 +44,7 @@ func _fixed_process(delta):
 			col.add_child(new_arrow)
 			new_arrow.set_global_pos(arrow_pos)
 			new_arrow.set_global_transform(arrow_rot)
-			new_arrow.add_collision_exception_with(col)
+			new_arrow.get_node("CollisionShape2D").queue_free()
 			new_arrow.set_mode(3)
 			new_arrow.remove_from_group("enemies")
 			print(arrow.get_colliding_bodies()[0])

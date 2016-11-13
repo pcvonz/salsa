@@ -1,19 +1,99 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://scripts/player_1.gd" type="Script" id=1]
 [ext_resource path="res://art/character.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 17.2689, 21.1448 )
+points = Vector2Array( 10.4255, 30.9273, -1.46586, 40.6782, -5.27109, 43.2943, -20.7299, 38.2999, -15.2598, 24.0303, 12.8038, 20.7008 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 31.1165, -13.3085, 38.7269, -11.8816, 37.0621, 4.29068, 30.6408, 3.57719, 29.2138, -0.70369, 29.6895, -9.26546 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 24.933, -9.02764, 29.6895, -9.26546, 29.2138, -0.70369, 18.7494, 3.33937, 14.7064, 1.43675 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 17.5603, -13.7842, 24.933, -9.02764, 14.7064, 1.43675, 9.71201, -4.50893 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -22.8703, -5.69806, -17.1624, -15.449, -9.55198, -22.1081, 8.99854, -19.492, 17.5603, -13.7842, 9.71201, -4.50893, -24.5351, 4.05285 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -9.55198, -22.1081, -12.8816, -34.713, 2.81503, -43.2747, 11.6146, -29.0051, 8.99854, -19.492 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -23.346, 17.3712, -24.5351, 4.05285, 9.71201, -4.50893, 12.5659, 7.38243, -14.0707, 16.6577 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 10.4255, 30.9273, 13.9929, 34.2569, 10.6633, 40.9161, 5.66895, 40.6782 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 10.4255, 30.9273, 5.66895, 40.6782, -1.46586, 40.6782 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 15.4199, 14.5172, 12.8038, 20.7008, -15.2598, 24.0303, -14.0707, 16.6577, 12.5659, 7.38243 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -23.346, 17.3712, -14.0707, 16.6577, -18.1138, 19.036 )
 
 [node name="player1" type="RigidBody2D" groups=[ "players" ]]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.98437, 0, 0, 1.98437, 0.559388, -0.0806632 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 3 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/2/trigger = false
+shapes/3/shape = SubResource( 4 )
+shapes/3/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/3/trigger = false
+shapes/4/shape = SubResource( 5 )
+shapes/4/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/4/trigger = false
+shapes/5/shape = SubResource( 6 )
+shapes/5/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/5/trigger = false
+shapes/6/shape = SubResource( 7 )
+shapes/6/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/6/trigger = false
+shapes/7/shape = SubResource( 8 )
+shapes/7/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/7/trigger = false
+shapes/8/shape = SubResource( 9 )
+shapes/8/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/8/trigger = false
+shapes/9/shape = SubResource( 10 )
+shapes/9/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/9/trigger = false
+shapes/10/shape = SubResource( 11 )
+shapes/10/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/10/trigger = false
 collision/layers = 1
 collision/mask = 1
 mode = 2
@@ -34,22 +114,21 @@ damp_override/angular = -1.0
 script/script = ExtResource( 1 )
 ammo = 200
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-transform/pos = Vector2( 0.559388, -0.0806632 )
-transform/scale = Vector2( 1.98437, 1.98437 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-
 [node name="Position2D" type="Position2D" parent="."]
 
-transform/pos = Vector2( 43.6152, -4.22051 )
+transform/pos = Vector2( 53.6152, -4.22051 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
 transform/pos = Vector2( -0.000973225, 0.0293331 )
 transform/scale = Vector2( 0.201502, 0.200573 )
 texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+build_mode = 0
+polygon = Vector2Array( -9.55198, -22.1081, -12.8816, -34.713, 2.81503, -43.2747, 11.6146, -29.0051, 8.99854, -19.492, 17.5603, -13.7842, 24.933, -9.02764, 29.6895, -9.26546, 31.1165, -13.3085, 38.7269, -11.8816, 37.0621, 4.29068, 30.6408, 3.57719, 29.2138, -0.70369, 18.7494, 3.33937, 14.7064, 1.43675, 9.71201, -4.50893, 12.5659, 7.38243, 15.4199, 14.5172, 12.8038, 20.7008, 10.4255, 30.9273, 13.9929, 34.2569, 10.6633, 40.9161, 5.66895, 40.6782, -1.46586, 40.6782, -5.27109, 43.2943, -20.7299, 38.2999, -15.2598, 24.0303, -14.0707, 16.6577, -18.1138, 19.036, -23.346, 17.3712, -24.5351, 4.05285, -22.8703, -5.69806, -17.1624, -15.449 )
+shape_range = Vector2( 0, 10 )
+trigger = false
 
 

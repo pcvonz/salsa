@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 12.6032, 0.890392 )
 
 [node name="arrow_trap" type="Node2D"]
 
@@ -18,7 +18,7 @@ persistent = true
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -40,6 +40,7 @@ damp_override/angular = -1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arrow"]
 
+transform/pos = Vector2( 2, 0 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
