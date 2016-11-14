@@ -249,8 +249,23 @@ transform/rot = -182.963
 
 [node name="arrow_trap10" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 628.362, 410.725 )
-transform/rot = -179.793
+transform/pos = Vector2( 574.23, 426.331 )
+transform/rot = -187.159
+
+[node name="arrow_trap26" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 572.279, 419.503 )
+transform/rot = -187.159
+
+[node name="arrow_trap27" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 572.279, 411.213 )
+transform/rot = -187.159
+
+[node name="arrow_trap28" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 572.279, 411.213 )
+transform/rot = -187.159
 
 [node name="arrow_trap11" parent="." instance=ExtResource( 7 )]
 
@@ -282,19 +297,39 @@ transform/rot = -179.35
 transform/pos = Vector2( 590.238, 347.982 )
 transform/rot = -179.35
 
+[node name="arrow_trap22" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 589.263, 341.642 )
+transform/rot = -179.35
+
+[node name="arrow_trap23" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 588.775, 327.987 )
+transform/rot = -179.35
+
+[node name="arrow_trap24" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 588.775, 384.07 )
+transform/rot = -179.35
+
+[node name="arrow_trap25" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 578.046, 396.75 )
+transform/rot = -179.35
+
 [node name="arrow_trap17" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 590.238, 368.373 )
+transform/pos = Vector2( 586.789, 374.903 )
 transform/rot = -184.685
 
 [node name="arrow_trap18" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 590.238, 377.817 )
+transform/pos = Vector2( 597.493, 358.144 )
 transform/rot = -175.409
 
 [node name="arrow_trap19" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 592.813, 358.285 )
+transform/pos = Vector2( 585.51, 374.807 )
 transform/rot = -175.409
 
 [node name="arrow_trap20" parent="." instance=ExtResource( 7 )]
