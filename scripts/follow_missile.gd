@@ -28,20 +28,30 @@ func _ready():
 	Vehicle = Vehicle.new(mass, max_speed, max_force, max_turn_rate)
 	Steering = Steering.new(mass, max_speed, max_force, max_turn_rate)
 	connect("body_enter", self, "on_body_enter")
+	#It was really fun to have the enemies all die by colliding,
+	#But that made it so that bullets wouldn't register sometimes
+	#because when the follow enemies are in swarms, they're all colliding.
+	#So it was easier to just remove and then add the collision back
+	for i in get_tree().get_nodes_in_group("follow_enemies"):
+		add_collision_exception_with(i)
 
 func on_body_enter(body):
 	if immortal == false:
 		queue_free()
 	elif(die_on_bullet == true):
 		if(body.is_in_group("bullets")):
+
 			if(body.get_linear_velocity().length() > 100):
+				#Remove collision exception
+				for i in get_tree().get_nodes_in_group("follow_enemies"):
+					remove_collision_exception_with(i)
+				get_node("CollisionShape2D").set_trigger(false)
 				set_linear_velocity(body.get_linear_velocity())
 				set_fixed_process(false)
 				add_collision_exception_with(get_node("../player1"))
 				remove_from_group("enemies")
 				add_to_group("bullets")
-			
-		
+
 
 func find_closest_player():
 	for i in players:
@@ -62,5 +72,7 @@ func _fixed_process(delta):
 			Vehicle.update(delta, SteeringForce, speed_multiplier)
 			look_at(get_global_pos() - get_linear_velocity().normalized())
 			set_linear_velocity(Vehicle.velocity)
+	else:
+		get_node("CollisionShape2D").set_trigger(false)
 
 	

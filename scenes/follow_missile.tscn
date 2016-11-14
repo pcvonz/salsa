@@ -8,12 +8,12 @@
 custom_solver_bias = 0.0
 points = Vector2Array( 0, -10, 7, 5, -7, 5 )
 
-[node name="follow_missile" type="RigidBody2D" groups=[ "enemies" ]]
+[node name="follow_missile" type="RigidBody2D" groups=[ "follow_enemies", "enemies" ]]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, -0.509056, 2.48871 )
-shapes/0/trigger = false
+shapes/0/trigger = true
 collision/layers = 1
 collision/mask = 1
 mode = 0
@@ -49,7 +49,7 @@ texture = ExtResource( 2 )
 
 transform/pos = Vector2( -0.509056, 2.48871 )
 shape = SubResource( 1 )
-trigger = false
+trigger = true
 _update_shape_index = 0
 
 

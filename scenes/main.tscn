@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/tileset.tres" type="TileSet" id=2]
@@ -6,13 +6,12 @@
 [ext_resource path="res://scenes/balloon_energy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/follow_missile.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/vine.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/arrow_trap.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/spike.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/breakable_wall.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/spike.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/breakable_wall.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 
-transform/pos = Vector2( 300, 150 )
+transform/pos = Vector2( 300, 153 )
 script/script = ExtResource( 1 )
 
 [node name="TileMap" type="TileMap" parent="." groups=[ "static_bodies" ]]
@@ -161,7 +160,7 @@ die_on_bullet = true
 
 [node name="follow_missile15" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 537.942, -42.513 )
+transform/pos = Vector2( 538.942, -42.513 )
 mass = 28.321
 max_speed = 200.0
 mass = 28.321
@@ -242,115 +241,15 @@ speed_multiplier = 0.2
 transform/pos = Vector2( 161.981, 310.457 )
 speed_multiplier = 0.2
 
-[node name="arrow_trap8" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 626.146, 394.104 )
-transform/rot = -182.963
-
-[node name="arrow_trap10" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 574.23, 426.331 )
-transform/rot = -187.159
-
-[node name="arrow_trap26" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 572.279, 419.503 )
-transform/rot = -187.159
-
-[node name="arrow_trap27" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 572.279, 411.213 )
-transform/rot = -187.159
-
-[node name="arrow_trap28" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 572.279, 411.213 )
-transform/rot = -187.159
-
-[node name="arrow_trap11" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 587.997, 281.89 )
-transform/rot = -179.35
-
-[node name="arrow_trap12" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 589.225, 288.029 )
-transform/rot = -179.35
-
-[node name="arrow_trap13" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 590.667, 298.735 )
-transform/rot = -179.35
-
-[node name="arrow_trap14" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 589.594, 319.006 )
-transform/rot = -179.35
-
-[node name="arrow_trap15" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 589.594, 336.177 )
-transform/rot = -179.35
-
-[node name="arrow_trap16" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 590.238, 347.982 )
-transform/rot = -179.35
-
-[node name="arrow_trap22" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 589.263, 341.642 )
-transform/rot = -179.35
-
-[node name="arrow_trap23" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 588.775, 327.987 )
-transform/rot = -179.35
-
-[node name="arrow_trap24" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 588.775, 384.07 )
-transform/rot = -179.35
-
-[node name="arrow_trap25" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 578.046, 396.75 )
-transform/rot = -179.35
-
-[node name="arrow_trap17" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 586.789, 374.903 )
-transform/rot = -184.685
-
-[node name="arrow_trap18" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 597.493, 358.144 )
-transform/rot = -175.409
-
-[node name="arrow_trap19" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 585.51, 374.807 )
-transform/rot = -175.409
-
-[node name="arrow_trap20" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 596.892, 265.561 )
-transform/rot = -175.409
-
-[node name="arrow_trap21" parent="." instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 602.472, 270.283 )
-transform/rot = -175.409
-
-[node name="spike" parent="." instance=ExtResource( 8 )]
+[node name="spike" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 382.145, 458.266 )
 
-[node name="spike2" parent="." instance=ExtResource( 8 )]
+[node name="spike2" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 404.044, 458.266 )
 
-[node name="spike3" parent="." instance=ExtResource( 8 )]
+[node name="spike3" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 427.111, 458.266 )
 
@@ -362,7 +261,7 @@ transform/pos = Vector2( -208.716, -45.4264 )
 
 transform/pos = Vector2( -108.716, -45.4264 )
 
-[node name="Breakable" parent="." instance=ExtResource( 9 )]
+[node name="Breakable" parent="." instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 489.59, 352.001 )
 
