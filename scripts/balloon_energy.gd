@@ -35,7 +35,7 @@ func _fixed_process(delta):
 	#Getting a null node throws a non fatal error, maybe there is a different method in Godot for checking if a node exists? 
 	if moving == true and get_node("Balloon") != null:
 		if(!get_tree().is_editor_hint() or preview_movement):
-			move_to = Vector2(moving_dist*sin(period * time_elapsed), 0)
+			move_to = Vector2(moving_dist*sin(period * time_elapsed), moving_dist*.5*cos(period * 2 * time_elapsed))
 			set_pos(get_pos() + move_to)
 	else:
 		set_fixed_process(false)

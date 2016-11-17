@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://scenes/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/player1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/player2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/follow_missile.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 0, 0, 1, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 15, 0, 65536, 0, 65539, 0, 65540, 0, 65541, 0, 65551, 0, 131072, 0, 131087, 0, 196608, 0, 196622, 0, 196623, 0, 262144, 0, 262158, 0, 262159, 0, 327680, 0, 327694, 0, 327695, 0, 393216, 0, 393217, 0, 393231, 0, 458752, 0, 458753, 0, 458767, 0, 524288, 0, 524289, 0, 524303, 0, 589824, 0, 589831, 0, 589832, 0, 589833, 0, 589839, 0, 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655365, 0, 655366, 0, 655367, 0, 655368, 0, 655369, 0, 655370, 0, 655371, 0, 655372, 0, 655373, 0, 655374, 0, 655375, 0 )
+__meta__ = { "_edit_lock_":true }
+
+[node name="player1" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 161.792, 571.849 )
+
+[node name="player2" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 840.667, 574.834 )
+mass = 2.04082
+gravity_scale = 0.5
+
+[node name="follow_missile" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 476.131, 243.507 )
+transform/scale = Vector2( 1, 1 )
+
+[node name="follow_missile1" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 590.689, 243.507 )
+transform/scale = Vector2( 1, 1 )
+
+[node name="follow_missile2" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 296.757, 238.985 )
+transform/scale = Vector2( 1, 1 )
+
+[node name="label1" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 14.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="label2" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 14.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
