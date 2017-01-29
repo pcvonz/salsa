@@ -46,7 +46,8 @@ func _fixed_process(delta):
 			new_arrow.set_global_transform(arrow_rot)
 			new_arrow.get_node("CollisionShape2D").queue_free()
 			new_arrow.set_mode(3)
-			new_arrow.remove_from_group("enemies")
+			if new_arrow.is_in_group("enemies"):
+				new_arrow.remove_from_group("enemies")
 			print(arrow.get_colliding_bodies()[0])
 			print(arrow.get_colliding_bodies()[0].get_children())
 			set_fixed_process(false)

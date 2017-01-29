@@ -5,6 +5,8 @@ extends Node2D
 # var a=2
 # var b="textvar"
 var start_pos = 100
+var player
+var node_ref
 func _ready():
 	var player_count = get_node("/root/global").player_count
 	var player_1 = preload('res://scenes/player1.tscn').instance()
@@ -22,12 +24,15 @@ func _ready():
 		player_2.set_global_pos(get_node("player2_start").get_global_pos())
 		
 	set_process(true)
-
-
+	player = get_node("player_1")
+	node_ref =  weakref(player)
+	
+	
 
 func _process(delta):
 	#Win condition is all energy tanks have been picked up
 	#All energy tanks are in the group "energy"
-	get_node("Light2D").set_pos(get_node("player_1").get_pos())
+	if(node_ref.get_ref() != null):	
+		get_node("Light2D").set_pos(get_node("player_1").get_pos())
 	if(get_tree().get_nodes_in_group("energy").size() <= 0):
 		print("level_complete")

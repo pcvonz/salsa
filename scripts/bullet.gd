@@ -11,7 +11,7 @@ var player_origin
 func bullet_hit(body):
 	if body.is_in_group('players') and body.get_name() != player_origin:
 		body.add_ammo(-20)
-	self.remove_and_skip()
+	self.queue_free()
 
 func _ready():
 	connect("body_enter", self, "bullet_hit")
