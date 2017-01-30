@@ -36,7 +36,7 @@ texture = ExtResource( 3 )
 
 [node name="Ambient" type="CanvasModulate" parent="."]
 
-color = Color( 0.1754, 0.161133, 0.34375, 1 )
+color = Color( 0.324335, 0.301834, 0.589844, 1 )
 
 [node name="Light2D" type="Light2D" parent="."]
 
@@ -47,7 +47,7 @@ texture = ExtResource( 4 )
 offset = Vector2( 0, 0 )
 scale = 1.0
 color = Color( 0.554688, 0.470252, 0.182007, 1 )
-energy = 1.0
+energy = 3.0
 mode = 0
 range/height = 0.0
 range/z_min = -1024
