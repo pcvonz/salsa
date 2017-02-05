@@ -17,6 +17,6 @@ func one_player():
 
 func two_player():
 	global.player_count = 2
-	global.goto_scene("res://scenes/main.tscn")
+	global.goto_scene("res://scenes/split_screen.tscn")
 	
 

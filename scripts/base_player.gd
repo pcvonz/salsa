@@ -33,6 +33,8 @@ var speed_multiplier = 1
 var name
 var label
 
+var cam
+
 func set_speed_multiplier(new_multiplier):
 	speed_multiplier = new_multiplier
 
@@ -74,21 +76,21 @@ func _fixed_process(delta):
 		queue_free()
 
 func _input(ev):
-	if(Input.is_action_pressed(up)):
+	if(ev.is_action_pressed(up)):
 		shoot_vector = Vector2(0, 200)
 		direction = UP
 		set_rot(direction)
-	if(Input.is_action_pressed(left)):
+	if(ev.is_action_pressed(left)):
 		shoot_vector = Vector2(200, 0)
 		direction = LEFT
 		set_rot(direction)
-
-
-	if(Input.is_action_pressed(right)):
+		cam.update(Vector2(-200, 0))
+	if(ev.is_action_pressed(right)):
 		shoot_vector = Vector2(-200, 0)
 		direction = RIGHT
 		set_rot(direction)
-	if(Input.is_action_pressed(down)):
+		cam.update(Vector2(200, 0))
+	if(ev.is_action_pressed(down)):
 		shoot_vector = Vector2(0, -200)
 		direction = DOWN
 		set_rot(direction)
@@ -115,6 +117,8 @@ func set_controls(up, down, right, left, shoot, label, name):
 	self.name = name
 
 func _ready():
+	cam = get_node("camera")
+	cam.init_glide_cam(Vector2(200, 0))
 	set_continuous_collision_detection_mode(CCD_MODE_CAST_SHAPE)	#Slower collision detection, but more precise, which is what we want for this I think?
 	bullet = preload('res://scenes/bullet.tscn').instance()
 	set_process_input(true)

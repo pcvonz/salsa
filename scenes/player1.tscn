@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=15 format=1]
 
 [ext_resource path="res://scripts/player_1.gd" type="Script" id=1]
 [ext_resource path="res://art/character.png" type="Texture" id=2]
+[ext_resource path="res://scripts/glid_cam.gd" type="Script" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -94,8 +95,8 @@ shapes/9/trigger = false
 shapes/10/shape = SubResource( 11 )
 shapes/10/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/10/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 3
+collision/mask = 3
 mode = 2
 mass = 1.83673
 friction = 1.0
@@ -130,5 +131,29 @@ build_mode = 0
 polygon = Vector2Array( -9.55198, -22.1081, -12.8816, -34.713, 2.81503, -43.2747, 11.6146, -29.0051, 8.99854, -19.492, 17.5603, -13.7842, 24.933, -9.02764, 29.6895, -9.26546, 31.1165, -13.3085, 38.7269, -11.8816, 37.0621, 4.29068, 30.6408, 3.57719, 29.2138, -0.70369, 18.7494, 3.33937, 14.7064, 1.43675, 9.71201, -4.50893, 12.5659, 7.38243, 15.4199, 14.5172, 12.8038, 20.7008, 10.4255, 30.9273, 13.9929, 34.2569, 10.6633, 40.9161, 5.66895, 40.6782, -1.46586, 40.6782, -5.27109, 43.2943, -20.7299, 38.2999, -15.2598, 24.0303, -14.0707, 16.6577, -18.1138, 19.036, -23.346, 17.3712, -24.5351, 4.05285, -22.8703, -5.69806, -17.1624, -15.449 )
 shape_range = Vector2( 0, 10 )
 trigger = false
+
+[node name="camera" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = true
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+script/script = ExtResource( 3 )
+max_speed = 0.0
+mass = 1.0
+max_force = 1.0
+max_turn_rate = 1.0
 
 

@@ -17,6 +17,10 @@ func seek(target, object):
 	desired_vec = desired_vec.normalized() * max_speed
 	return(desired_vec - object.get_linear_velocity())
 
+func seek_pos(target_vec, object):
+	var desired_vec = target_vec - object.get_pos()
+	desired_vec = desired_vec.normalized() * max_speed
+	return(desired_vec - object.get_pos())
 
 func _init(mass, max_speed, max_force, max_turn_rate):
 	self.mass = mass

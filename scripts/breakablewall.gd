@@ -11,7 +11,7 @@ func _break_wall(body):
 	print('shot wall')
 	if body.is_in_group('bullets'):
 		strength -= 1
-		if strength == 0:
+		if strength < 0:
 			body.queue_free()
 			queue_free()
 

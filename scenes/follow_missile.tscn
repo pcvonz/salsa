@@ -8,14 +8,14 @@
 custom_solver_bias = 0.0
 points = Vector2Array( 0, -10, 7, 5, -7, 5 )
 
-[node name="follow_missile" type="RigidBody2D" groups=[ "follow_enemies", "enemies" ]]
+[node name="follow_missile" type="RigidBody2D" groups=[ "enemies", "follow_enemies" ]]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, -0.509056, 2.48871 )
 shapes/0/trigger = true
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 mode = 0
 mass = 73.992
 friction = 1.0
@@ -25,7 +25,7 @@ custom_integrator = false
 continuous_cd = 0
 contacts_reported = 1
 contact_monitor = true
-sleeping = false
+sleeping = true
 can_sleep = true
 velocity/linear = Vector2( 0, 0 )
 velocity/angular = 0.0

@@ -67,11 +67,13 @@ func _fixed_process(delta):
 		var node_ref =  weakref(target)
 		if node_ref.get_ref() != null:
 			find_closest_player()
-		if(players.size() > 0):
+		if(players.size() > 0 and get_global_pos().distance_to(target.get_global_pos()) < 200):
 			SteeringForce += Steering.seek(target, self)
 			Vehicle.update(delta, SteeringForce, speed_multiplier)
 			look_at(get_global_pos() - get_linear_velocity().normalized())
 			set_linear_velocity(Vehicle.velocity)
+		else:
+			set_gravity_scale(0)
 	else:
 		get_node("CollisionShape2D").set_trigger(false)
 
